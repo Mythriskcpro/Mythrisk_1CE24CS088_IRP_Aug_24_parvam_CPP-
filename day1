@@ -246,3 +246,120 @@ int main() {
     return  0;
 }
 
+
+
+
+
+3...#include <iostream>
+#include <string>
+using namespace std;
+
+class Teacher {
+public:
+    string tname;
+    string tdob;
+    string tempid;
+    string tdept;
+    float texp;
+    float tsalary;
+
+    // Default Constructor
+    Teacher() {
+        tempid = "Un Defined";
+        tdept = "Un Assigned";
+        texp = 0;
+        tsalary = 0;
+    }
+
+    // Constructor with some attributes
+    Teacher(string s_tname, string s_tdob, float s_tsalary) {
+        tname = s_tname;
+        tdob = s_tdob;
+        tsalary = s_tsalary;
+        tempid = "Un Defined";
+        tdept = "Un Assigned";
+        texp = 0;
+    }
+
+    // Full Constructor
+    Teacher(string s_tname, string s_tdob, float s_tsalary, string s_tempid, string s_tdept, float s_texp) {
+        tname = s_tname;
+        tdob = s_tdob;
+        tsalary = s_tsalary;
+        tempid = s_tempid;
+        tdept = s_tdept;
+        texp = s_texp;
+    }
+
+    // Copy Constructor
+    Teacher(const Teacher& cy_tch) {
+        tname = cy_tch.tname;
+        tdob = cy_tch.tdob;
+        tsalary = cy_tch.tsalary;
+        tempid = cy_tch.tempid;
+        tdept = cy_tch.tdept;
+        texp = cy_tch.texp;
+    }
+
+    void getTeacherDetails() {
+        cout << "| " << tname << " | " << tdob << " | " << tdept << " | "
+             << tempid << " | " << texp << " | " << tsalary << " |" << endl;
+    }
+
+    void setSalary(float s_salary) {
+        tsalary = s_salary;
+    }
+
+    float getSalary() {
+        return tsalary;
+    }
+
+    void setDepartment(const string& s_dept) {
+        tdept = s_dept;
+    }
+
+    string getDepartment() {
+        return tdept;
+    }
+
+    void setName(const string& name) {
+        tname = name;
+    }
+
+    string getName() {
+        return tname;
+    }
+};
+
+int main() {
+    // Create teachers
+    Teacher t1("Teacher 1", "12-05-1990", 15000, "CECTH001", "CSE", 5);
+    Teacher t2("Teacher 2", "12-05-1990", 16000, "CECTH002", "ISE", 3);
+    Teacher t3("Teacher 3", "12-05-1990", 30000, "CECTH003", "ISE", 2);
+    Teacher t4("Teacher 4", "12-05-1990", 14000, "CECTH004", "ECE", 7);
+    Teacher t5("Teacher 5", "12-05-1990", 25000, "CECTH005", "MECH", 4);
+
+    // Array of teacher pointers
+    Teacher* teachers[] = { &t1, &t2, &t3, &t4, &t5 };
+
+    // Apply logic: if dept is ISE → AIML; else prefix name with Dr.
+    for (int i = 0; i < 5; ++i) {
+        if (teachers[i]->getDepartment() == "ISE") {
+            teachers[i]->setDepartment("AIML");
+        } else {
+            string currentName = teachers[i]->getName();
+            if (currentName.find("Dr. ") != 0) { // Avoid double "Dr." prefix
+                teachers[i]->setName("Dr. " + currentName);
+            }
+        }
+    }
+
+    // Display final teacher details
+    cout << "\n------ Final Teacher Details ------" << endl;
+    cout << "| Name | DOB | Department | Employee ID | Experience | Salary |" << endl;
+    for (int i = 0; i < 5; ++i) {
+        teachers[i]->getTeacherDetails();
+    }
+
+    return 0;
+}
