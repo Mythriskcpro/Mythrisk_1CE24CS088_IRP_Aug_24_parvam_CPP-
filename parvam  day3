@@ -1,0 +1,698 @@
+
+#include <iostream>
+using namespace std;
+class Car{
+    
+    public :
+    int wheels=0; // e.g 4
+    int seats; // e.g 5 or 6
+    int doors; // e.g 4 or 5
+    string engineType; // v8
+    string modelNo;
+    float fuelCap;
+    
+    Car(){
+        seats=4;
+    }
+    Car(int swheels,float sfuelCap){`   
+        fuelCap = sfuelCap;
+    }
+    Car(int swheels,float sfuelCap,int sseats,int sdoors,string sengineType,string smodelNo){
+        wheels=swheels;
+        fuelCap = sfuelCap;
+        seats =sseats;
+        doors = sdoors;
+        engineType=sengineType;
+        modelNo = smodelNo;
+    }
+
+    void setCarDetails(int swheels,float sfuelCap,int sseats,int sdoors,string sengineType,string smodelNo){
+        wheels=swheels;
+        fuelCap = sfuelCap;
+        seats =sseats;
+        doors = sdoors;
+        engineType=sengineType;
+        modelNo = smodelNo;
+    }
+    void getCarDetails(){
+        cout<<" ---------- Start Car Details -----------"<<endl;
+        cout<<" No of Wheels = "<<wheels<<endl;
+        cout<<" Fuel Capacity = "<<fuelCap<<endl;
+        cout<<" No of Seats = "<<seats<<endl;
+        cout<<" No of Doors = "<<doors<<endl;
+        cout<<" No of Engine Type = "<<engineType<<endl;
+        cout<<" No of Model No = "<<modelNo<<endl;
+        cout<<" ---------- End Car Details -----------"<<endl;
+    }
+    void getFuelCost(float fprice){
+        cout<<" Fuel cost  = "<<(fuelCap*fprice)<<endl;
+    }
+    
+    void setSeats(int sseats){
+         seats =sseats;
+    }
+    int getSeats(){
+         return seats;
+    }
+    void setDoors(int sDoors){
+        doors=sDoors;
+    }
+    int getDoors(){
+        return Doors;
+    }
+};
+
+int main(){
+    Car c1,c2;
+    Car c3(4,18,5,4,"A7","C4U289");
+    Car c4(4,8);
+    
+    cout<<"\n---------- before set  get the Specific seat number -----------"<<endl;
+    cout<<"the no of seats present in  = "<<c3.getSeats()<<endl;
+    
+    cout<<"\n---------- before set  get the Specific doors number -----------"<<endl;
+    cout<<"the no of doors present in  = "<<c4.getdoors()<<endl;
+    
+    c3.setSeats(6);
+    c1.setCarDetails(4,18,5,4,"A8","C4U234");
+    c2.setCarDetails(4,12,5,4,"A9","A4I234");
+    cout<<"\n---------- C1 Car Details -----------"<<endl;
+    c1.getCarDetails();
+    cout<<"\n---------- C2 Car Details -----------"<<endl;
+    c2.getCarDetails();
+     cout<<"\n---------- C3 Car Details -----------"<<endl;
+    c3.getCarDetails();
+    c4.getCarDetails();
+    c1.getFuelCost(84);
+    c2.getFuelCost(100);
+    
+    
+    cout<<"\n---------- after set get the Specific seat number -----------"<<endl;
+    cout<<"the no of seats present in  = "<<c3.getSeats()*4<<endl;
+
+    cout<<"\n---------- after set get the Specific doors number -----------"<<endl;
+    cout<<"the no of doors present in  = "<<c4.getdoors()*4<<endl;
+}
+
+
+
+
+
+
+
+2 ........................................................................
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Car {
+public:
+    int wheels = 0;
+    int seats;
+    int doors;
+    string engineType;
+    string modelNo;
+    float fuelCap;
+
+    Car() {
+        seats = 4;
+    }
+
+    Car(int swheels, float sfuelCap) {
+        wheels = swheels;
+        fuelCap = sfuelCap;
+    }
+
+    Car(int swheels, float sfuelCap, int sseats, int sdoors, string sengineType, string smodelNo) {
+        wheels = swheels;
+        fuelCap = sfuelCap;
+        seats = sseats;
+        doors = sdoors;
+        engineType = sengineType;
+        modelNo = smodelNo;
+    }
+
+    void setCarDetails(int swheels, float sfuelCap, int sseats, int sdoors, string sengineType, string smodelNo) {
+        wheels = swheels;
+        fuelCap = sfuelCap;
+        seats = sseats;
+        doors = sdoors;
+        engineType = sengineType;
+        modelNo = smodelNo;
+    }
+
+    void getCarDetails() {
+        cout << " ---------- Start Car Details -----------" << endl;
+        cout << " No of Wheels = " << wheels << endl;
+        cout << " Fuel Capacity = " << fuelCap << endl;
+        cout << " No of Seats = " << seats << endl;
+        cout << " No of Doors = " << doors << endl;
+        cout << " Engine Type = " << engineType << endl;
+        cout << " Model No = " << modelNo << endl;
+        cout << " ---------- End Car Details -----------" << endl;
+    }
+
+    void getFuelCost(float fprice) {
+        cout << " Fuel cost  = " << (fuelCap * fprice) << endl;
+    }
+
+    void setSeats(int sseats) {
+        seats = sseats;
+    }
+
+    int getSeats() {
+        return seats;
+    }
+
+    void setDoors(int sDoors) {
+        doors = sDoors;
+    }
+
+    int getDoors() {
+        return doors;
+    }
+};
+
+int main() {
+    Car c1, c2;
+    Car c3(4, 18, 5, 4, "A7", "C4U289");
+    Car c4(4, 8);
+
+    cout << "\n---------- before set  get the Specific seat number -----------" << endl;
+    cout << "the no of seats present in  = " << c3.getSeats() << endl;
+
+    cout << "\n---------- before set  get the Specific doors number -----------" << endl;
+    cout << "the no of doors present in  = " << c4.getDoors() << endl;
+
+    c3.setSeats(6);
+    c1.setCarDetails(4, 18, 5, 4, "A8", "C4U234");
+    c2.setCarDetails(4, 12, 5, 4, "A9", "A4I234");
+
+    cout << "\n---------- C1 Car Details -----------" << endl;
+    c1.getCarDetails();
+
+    cout << "\n---------- C2 Car Details -----------" << endl;
+    c2.getCarDetails();
+
+    cout << "\n---------- C3 Car Details -----------" << endl;
+    c3.getCarDetails();
+
+    c4.getCarDetails();
+
+    c1.getFuelCost(84);
+    c2.getFuelCost(100);
+
+
+
+    cout << "\n---------- after set get the Specific seat number -----------" << endl;
+    cout << "the no of seats present in  = " << c3.getSeats() * 4 << endl;
+
+    cout << "\n---------- after set get the Specific doors number -----------" << endl;
+    cout << "the no of doors present in  = " << c4.getDoors() * 4 << endl;
+
+    return 0;
+}
+
+
+
+
+3.........................................................................................
+
+
+
+#include <iostream>
+using namespace std;
+class Teacher{
+    public:
+    string tname;
+    string tdob;
+    string tempid;
+    string tdept;
+    float texp;
+    float tsalary;
+    
+    Teacher(){
+        tempid="Un Defined";
+        tdept = "Un Assigned";
+        texp = 0;
+    }
+    Teacher(string s_tname,string s_tdob,float s_tsalary){
+        tname=s_tname;
+        tdob=s_tdob;
+        tsalary =s_tsalary;
+    }
+    Teacher(string s_tname,string s_tdob,float s_tsalary,string s_tempid,string s_tdept,float s_texp){
+        tname=s_tname;
+        tdob=s_tdob;
+        tsalary =s_tsalary;
+        tempid=s_tempid;
+        tdept = s_tdept;
+        texp = s_texp;
+    }
+    
+    Teacher(const Teacher &cy_tch){
+        tname=cy_tch.tname;
+        tdob=cy_tch.tdob;
+        tsalary =cy_tch.tsalary;
+        tempid=cy_tch.tempid;
+        tdept = cy_tch.tdept;
+        texp = cy_tch.texp;
+    }
+    
+    void getTeacherDetails(){
+        cout<<" ------ Start Teacher Details --------"<<endl;
+        cout<<" Name : "<<tname<<endl;
+        cout<<" DOB : "<<tdob<<endl;
+        cout<<" Department : "<<tdept<<endl;
+        cout<<" Employee ID : "<<tempid<<endl;
+        cout<<" Experience : "<<texp<<endl;
+        cout<<" Salary  : "<<tsalary<<endl;
+        cout<<" ------ End Teacher Details --------"<<endl;
+    }
+    void setSalary(float ttsalary){
+      tsalary=ttsalary;
+    }
+    int getSalary(){
+        return tsalary;
+    } 
+
+     void adjustSalary() {
+        if (tsalary <= 15000)
+         {
+            tsalary *= 20000;
+        } else 
+            tsalary -= 8000;
+        }
+    }
+   
+};
+int main() {
+    Teacher t1("Teacher 1", "12-05-1990", 20000.50, "CECTH001", "CSE", 5.3);
+    Teacher t2 = t1;
+
+    t1.adjustSalary();
+    t2.adjustSalary();
+
+    cout << "\n ------ T1 Teacher Details --------" << endl;
+    t1.getTeacherDetails();
+
+    cout << "\n ------ T2 Teacher Details --------" << endl;
+    t2.getTeacherDetails();
+
+    return 0;
+}
+
+
+
+
+4...........................................................
+
+
+
+#include<iostream>
+using namespace std;
+class arthmatic operator{
+    public:
+    int addition(1,2){
+           cout<<"arthmatic addition"<<class<<end1;
+    }
+};
+class substract:public arthmatic{
+    public:
+    int substraction(){
+        cout<<"substract......"<<end1;
+    }
+};
+class multipication{
+    public:
+    int multipication(){
+        cout<<"multiplication...."<<end1;
+    }
+};
+ int main()
+ addition a1;
+ sdubstraction s1 ;
+ multipication m1;
+ s1.arthmaticAddition(1)
+ s1.arthmaticsubstraction(1,3)
+m1.arthmaticmultiplication
+return 0;
+
+
+ day 2.............................................................................
+
+
+
+
+#include <iostream>
+using namespace std;
+class Teacher{
+    public:
+    string tname;
+    string tdob;
+    string tempid;
+    string tdept;
+    float texp;
+    float tsalary;
+    
+    Teacher(){
+        tempid="Un Defined";
+        tdept = "Un Assigned";
+        texp = 0;
+    }
+    Teacher(string s_tname,string s_tdob,float s_tsalary){
+        tname=s_tname;
+        tdob=s_tdob;
+        tsalary =s_tsalary;
+    }
+    Teacher(string s_tname,string s_tdob,float s_tsalary,string s_tempid,string s_tdept,float s_texp){
+        tname=s_tname;
+        tdob=s_tdob;
+        tsalary =s_tsalary;
+        tempid=s_tempid;
+        tdept = s_tdept;
+        texp = s_texp;
+    }
+    Teacher(const Teacher &cy_tch)
+    {
+       tname=cy_tch.tname;
+        tdob=cy_tch.tdob;
+        tsalary =cy_tch.tsalary;
+        tempid=cy_tch.tempid;
+        tdept =cy_tch.tdept;
+        texp =cy_tch.texp;
+    }
+    
+    void getTeacherDetails(){
+        cout<<" ------ Start Teacher Details --------"<<endl;
+        cout<<" Name : "<<tname<<endl;
+        cout<<" DOB : "<<tdob<<endl;
+        cout<<" Department : "<<tdept<<endl;
+        cout<<" Employee ID : "<<tempid<<endl;
+        cout<<" Experience : "<<texp<<endl;
+        cout<<" Salary  : "<<tsalary<<endl;
+        cout<<" ------ End Teacher Details --------"<<endl;
+    }
+    
+};
+
+
+int main() {
+    
+    Teacher t1("Teacher 1","12-05-1990",15000.50,"CECTH001","CSE",5.3);
+    cout<<"\n ------ T1 Teacher Details --------"<<endl;
+    //t1("Teacher 1","12-05-1990",15000);
+    t1.getTeacherDetails();
+
+    Teacher t2=t1;
+
+    cout<<"\n-----T2 Teacher Details --------"<<endl;
+    t2.getTeacherDetails();
+    return  0;
+}
+
+
+2'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
+
+#include <iostream>
+using namespace std;
+class Teacher{
+    public:
+    string tname;
+    string tdob;
+    string tempid;
+    string tdept;
+    float texp;
+    float tsalary;
+    
+    Teacher(){
+        tempid="Un Defined";
+        tdept = "Un Assigned";
+        texp = 0;
+    }
+    Teacher(string s_tname,string s_tdob,float s_tsalary){
+        tname=s_tname;
+        tdob=s_tdob;
+        tsalary =s_tsalary;
+    }
+    Teacher(string s_tname,string s_tdob,float s_tsalary,string s_tempid,string s_tdept,float s_texp){
+        tname=s_tname;
+        tdob=s_tdob;
+        tsalary =s_tsalary;
+        tempid=s_tempid;
+        tdept = s_tdept;
+        texp = s_texp;
+    }
+    
+    Teacher(const Teacher &cy_tch){
+        tname=cy_tch.tname;
+        tdob=cy_tch.tdob;
+        tsalary =cy_tch.tsalary;
+        tempid=cy_tch.tempid;
+        tdept = cy_tch.tdept;
+        texp = cy_tch.texp;
+    }
+    
+    void getTeacherDetails(){
+        //cout<<" ------ Start Teacher Details --------"<<endl;
+        // cout<<" Name : "<<tname<<", DOB : "<<tdob<<", Department : "<<tdept<<", Employee ID : "<<tempid<<", Experience : "<<texp<<", Salary  : "<<tsalary<<endl;
+        cout<<" | "<<tname<<" | "<<tdob<<" | "<<tdept<<" | "<<tempid<<" | "<<texp<<" | "<<tsalary<<endl;
+        // cout<<" DOB : "<<tdob<<endl;
+        // cout<<" Department : "<<tdept<<endl;
+        // cout<<" Employee ID : "<<tempid<<endl;
+        // cout<<" Experience : "<<texp<<endl;
+        // cout<<" Salary  : "<<tsalary<<endl;
+        // cout<<" ------ End Teacher Details --------"<<endl;
+    }
+    void setSalary(float s_salary){
+        tsalary = s_salary;
+    }
+    float getSalary(){
+        return tsalary;
+    }
+    
+};
+
+
+int main() {
+    
+    Teacher t1("Teacher 1","12-05-1990",15000,"CECTH001","CSE",5);
+    Teacher t3("Teacher 3","12-05-1990",30000.50,"CECTH003","CSE",2);
+    Teacher t4("Teacher 4","12-05-1990",14999,"CECTH004","CSE",7);
+    Teacher t5("Teacher 5","12-05-1990",25000.50,"CECTH005","CSE",2);
+    Teacher t2=t1;
+    cout<<"\n ------ Before Salary Upadte :  Teacher Details --------"<<endl;
+    cout<<"|   Name   |  DOB    |   Department    |   Employee ID   |  Experience |    Salary  |"<<endl;
+    
+    
+    
+    
+    t1.getTeacherDetails();
+    t2.getTeacherDetails();
+    t3.getTeacherDetails();
+    t4.getTeacherDetails();
+    t5.getTeacherDetails();
+    
+    
+    cout<<"T1 Salary = "<<t1.getSalary()<<endl;
+    cout<<"T2 Salary = "<<t2.getSalary()<<endl;
+    cout<<"T3 Salary = "<<t3.getSalary()<<endl;
+    cout<<"T4 Salary = "<<t4.getSalary()<<endl;
+    cout<<"T5 Salary = "<<t5.getSalary()<<endl;
+    
+    if (t1.getSalary() <= 15000){
+        t1.setSalary(t1.getSalary()*2);
+    }else{
+        t1.setSalary(t1.getSalary()-5000);
+    }
+    
+    if (t2.getSalary() <= 15000){
+        t2.setSalary(t2.getSalary()*2);
+    }else{
+        t2.setSalary(t2.getSalary()-5000);
+    }
+    
+    if (t3.getSalary() <= 15000){
+        t3.setSalary(t3.getSalary()*2);
+    }else{
+        t3.setSalary(t3.getSalary()-5000);
+    }
+    
+     if (t4.getSalary() <= 15000){
+        t4.setSalary(t4.getSalary()*2);
+    }else{
+        t4.setSalary(t4.getSalary()-5000);
+    }
+     if (t5.getSalary() <= 15000){
+        t5.setSalary(t5.getSalary()*2);
+    }else{
+        t5.setSalary(t5.getSalary()-5000);
+    }
+    cout<<"\n\n ------ After Salary Upadte :  Teacher Details --------"<<endl;
+    cout<<"T1 Salary = "<<t1.getSalary()<<endl;
+    cout<<"T2 Salary = "<<t2.getSalary()<<endl;
+    cout<<"T3 Salary = "<<t3.getSalary()<<endl;
+    cout<<"T4 Salary = "<<t4.getSalary()<<endl;
+    cout<<"T5 Salary = "<<t5.getSalary()<<endl;
+
+    return  0;
+}
+
+
+
+-----------------------------------------------------------------------
+
+
+3.#include <iostream>
+using namespace std;
+class Teacher{
+    public:
+    string tname;
+    string tdob;
+    string tempid;
+    string tdept;
+    float texp;
+    float tsalary;
+    
+    Teacher(){
+        tempid="Un Defined";
+        tdept = "Un Assigned";
+        texp = 0;
+    }
+    Teacher(string s_tname,string s_tdob,float s_tsalary){
+        tname=s_tname;
+        tdob=s_tdob;
+        tsalary =s_tsalary;
+    }
+    Teacher(string s_tname,string s_tdob,float s_tsalary,string s_tempid,string s_tdept,float s_texp){
+        tname=s_tname;
+        tdob=s_tdob;
+        tsalary =s_tsalary;
+        tempid=s_tempid;
+        tdept = s_tdept;
+        texp = s_texp;
+    }
+    
+    Teacher(const Teacher &cy_tch){
+        tname=cy_tch.tname;
+        tdob=cy_tch.tdob;
+        tsalary =cy_tch.tsalary;
+        tempid=cy_tch.tempid;
+        tdept = cy_tch.tdept;
+        texp = cy_tch.texp;
+    }
+    
+    void getTeacherDetails(){
+        cout<<" | "<<tname<<" | "<<tdob<<" | "<<tdept<<" | "<<tempid<<" | "<<texp<<" | "<<tsalary<<endl;
+    }
+    
+    
+        
+    Teacher(string s_tname,string s_tdob,float s_tsalary,string s_tempid,string s_tdept,float s_texp)
+    {
+    
+        if(tdept=="ISE");
+        tdept="AIML";
+    }
+        else
+        {
+        cout<<"tname="<<s_tname<<Dr;
+        }   
+    
+     
+
+     void setName(string S_name){
+        tname=s_name;
+     }
+    
+      void getName(){
+        return=s_name;
+     }  
+
+      void setDept(string S_dept){
+        tdept=s_dept;
+     }
+    
+      void getDept(){
+        return=s_dept;
+     }  
+    
+};
+
+
+int main() {
+    
+    Teacher t1("Teacher 1","12-05-1990",15000,"CECTH001","CSE",5);
+    Teacher t3("Teacher 3","12-05-1990",30000.50,"CECTH003","ISE",2);
+    Teacher t4("Teacher 4","12-05-1990",14999,"CECTH004","CSE",7);
+    Teacher t5("Teacher 5","12-05-1990",25000.50,"CECTH005","ISE",2);
+    Teacher t2=t1;
+    cout<<"\n ------ Before Salary Upadte :  Teacher Details --------"<<endl;
+    cout<<"|   Name   |  DOB    |   Department    |   Employee ID   |  Experience |    Salary  |"<<endl;
+    
+    
+    
+    
+    t1.getTeacherDetails();
+    t2.getTeacherDetails();
+    t3.getTeacherDetails();
+    t4.getTeacherDetails();
+    t5.getTeacherDetails();
+    
+    
+    cout<<"T1 Salary = "<<t1.getSalary()<<endl;
+    cout<<"T2 Salary = "<<t2.getSalary()<<endl;
+    cout<<"T3 Salary = "<<t3.getSalary()<<endl;
+    cout<<"T4 Salary = "<<t4.getSalary()<<endl;
+    cout<<"T5 Salary = "<<t5.getSalary()<<endl;
+    
+    if (t){
+        t1.setSalary(t1.getSalary()*2);
+    }else{
+        t1.setSalary(t1.getSalary()-5000);
+    }
+    
+    if (t2.getSalary() <= 15000){
+        t2.setSalary(t2.getSalary()*2);
+    }else{
+        t2.setSalary(t2.getSalary()-5000);
+    }
+    
+    if (t3.getSalary() <= 15000){
+        t3.setSalary(t3.getSalary()*2);
+    }else{
+        t3.setSalary(t3.getSalary()-5000);
+    }
+    
+     if (t4.getSalary() <= 15000){
+        t4.setSalary(t4.getSalary()*2);
+    }else{
+        t4.setSalary(t4.getSalary()-5000);
+    }
+     if (t5.getSalary() <= 15000){
+        t5.setSalary(t5.getSalary()*2);
+    }else{
+        t5.setSalary(t5.getSalary()-5000);
+    }
+    cout<<"\n\n ------ After Salary Upadte :  Teacher Details --------"<<endl;
+    cout<<"T1 Salary = "<<t1.getSalary()<<endl;
+    cout<<"T2 Salary = "<<t2.getSalary()<<endl;
+    cout<<"T3 Salary = "<<t3.getSalary()<<endl;
+    cout<<"T4 Salary = "<<t4.getSalary()<<endl;
+    cout<<"T5 Salary = "<<t5.getSalary()<<endl;
+
+    return  0;
+}
+
+
+
+
+
+
+
+
